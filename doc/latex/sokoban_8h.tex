@@ -1,0 +1,256 @@
+\hypertarget{sokoban_8h}{\section{include/sokoban.h File Reference}
+\label{sokoban_8h}\index{include/sokoban.\-h@{include/sokoban.\-h}}
+}
+
+
+Main file for the game.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+Include dependency graph for sokoban.\-h\-:
+This graph shows which files directly or indirectly include this file\-:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structscell}{scell}
+\begin{DoxyCompactList}\small\item\em The structure representing the cells of the map. \end{DoxyCompactList}\item 
+struct \hyperlink{structsmap}{smap}
+\begin{DoxyCompactList}\small\item\em The structure representing the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{sokoban_8h_a1ed01349e5ea04f801fca2a660c90526}{\#define {\bfseries B\-O\-Y}~'@'}\label{sokoban_8h_a1ed01349e5ea04f801fca2a660c90526}
+
+\item 
+\hypertarget{sokoban_8h_aadc28515e36b373d890a8e561980a896}{\#define {\bfseries B\-O\-Y\-\_\-\-O\-N}~'+'}\label{sokoban_8h_aadc28515e36b373d890a8e561980a896}
+
+\item 
+\hypertarget{sokoban_8h_a23a390cc01279924f6190334c5fa97a0}{\#define {\bfseries B\-O\-X}~'\$'}\label{sokoban_8h_a23a390cc01279924f6190334c5fa97a0}
+
+\item 
+\hypertarget{sokoban_8h_a49e8334742fda42151966414adbb8633}{\#define {\bfseries B\-O\-X\-\_\-\-O\-N}~'$\ast$'}\label{sokoban_8h_a49e8334742fda42151966414adbb8633}
+
+\item 
+\hypertarget{sokoban_8h_a68921b4e30945adaaf546035a6206ee3}{\#define {\bfseries P\-A\-R\-K}~'.'}\label{sokoban_8h_a68921b4e30945adaaf546035a6206ee3}
+
+\item 
+\hypertarget{sokoban_8h_a2b7cf2a3641be7b89138615764d60ba3}{\#define {\bfseries E\-M\-P\-T\-Y}~' '}\label{sokoban_8h_a2b7cf2a3641be7b89138615764d60ba3}
+
+\item 
+\hypertarget{sokoban_8h_ac749b87dd5d843e4add3eb8e8a130f62}{\#define {\bfseries W\-A\-L\-L}~'\#'}\label{sokoban_8h_ac749b87dd5d843e4add3eb8e8a130f62}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{sokoban_8h_a0069f8b905f1af2d40b14c5493c63f7f}{typedef struct \hyperlink{structscell}{scell} \hyperlink{sokoban_8h_a0069f8b905f1af2d40b14c5493c63f7f}{scell}}\label{sokoban_8h_a0069f8b905f1af2d40b14c5493c63f7f}
+
+\begin{DoxyCompactList}\small\item\em An alias to the structure representing the cells of the map. \end{DoxyCompactList}\item 
+\hypertarget{sokoban_8h_aa65ae14af3fe009fb2f0b369180b419d}{typedef struct \hyperlink{structsmap}{smap} \hyperlink{sokoban_8h_aa65ae14af3fe009fb2f0b369180b419d}{smap}}\label{sokoban_8h_aa65ae14af3fe009fb2f0b369180b419d}
+
+\begin{DoxyCompactList}\small\item\em An alias to the structure representing the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{sokoban_8h_a3735ce26e85568e2447803c34706ffa6}{bool {\bfseries in} (int value, int $\ast$tableau, int len)}\label{sokoban_8h_a3735ce26e85568e2447803c34706ffa6}
+
+\item 
+\hypertarget{sokoban_8h_a128e223b6ce98c1862152d3439ad0a9a}{void {\bfseries print\-\_\-cell} (\hyperlink{structscell}{scell} cell)}\label{sokoban_8h_a128e223b6ce98c1862152d3439ad0a9a}
+
+\item 
+char \hyperlink{sokoban_8h_a54ba0c4c4ebd4816fa5cd6af6b9f0828}{access} (\hyperlink{structsmap}{smap} $\ast$p\-\_\-map, \hyperlink{structscell}{scell} cell)
+\begin{DoxyCompactList}\small\item\em Gives the value of a given cell. \end{DoxyCompactList}\item 
+void \hyperlink{sokoban_8h_a4ce5696a930daf9f836524d8f38bae3c}{modify} (\hyperlink{structsmap}{smap} $\ast$p\-\_\-map, \hyperlink{structscell}{scell} cell, char new)
+\begin{DoxyCompactList}\small\item\em Modifies a given cell. \end{DoxyCompactList}\item 
+void \hyperlink{sokoban_8h_a08198a23ebb8705b3d733f82c54e3ddb}{print\-\_\-map} (\hyperlink{structsmap}{smap} $\ast$p\-\_\-map)
+\begin{DoxyCompactList}\small\item\em Prints a map on the console. \end{DoxyCompactList}\item 
+\hyperlink{structsmap}{smap} $\ast$ \hyperlink{sokoban_8h_afcfc6b3f5188c90586245c87d3268fc2}{create\-\_\-doublon} (\hyperlink{structsmap}{smap} map)
+\begin{DoxyCompactList}\small\item\em Creates a new map, with exactly the same information as in the old one. \end{DoxyCompactList}\item 
+void \hyperlink{sokoban_8h_ab77b650ea7edf51128d82c6fe25db1fa}{deplacer\-\_\-boite} (\hyperlink{structsmap}{smap} $\ast$p\-\_\-map, \hyperlink{structscell}{scell} goal\-\_\-cell, char direction, int $\ast$flag)
+\begin{DoxyCompactList}\small\item\em To use if the player goes in a box \-: moves the box according to the rules of the game. \end{DoxyCompactList}\item 
+\hyperlink{structsmap}{smap} $\ast$ \hyperlink{sokoban_8h_abfda627829f36a496e65e1c470297ed4}{move\-\_\-player} (\hyperlink{structsmap}{smap} $\ast$p\-\_\-map, char direction)
+\begin{DoxyCompactList}\small\item\em Moves the player according to the rules of the game. \end{DoxyCompactList}\item 
+void \hyperlink{sokoban_8h_a209e5f04285341ef858e2e4c23e92d6d}{deallocate} (\hyperlink{structsmap}{smap} $\ast$p\-\_\-map)
+\begin{DoxyCompactList}\small\item\em Frees the map. \end{DoxyCompactList}\item 
+\hyperlink{structsmap}{smap} $\ast$ \hyperlink{sokoban_8h_afdafec469349ec9fa9e4527517a2b4df}{replay} (char $\ast$filename, int length, char $\ast$mvts)
+\begin{DoxyCompactList}\small\item\em Replays a map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main file for the game. \begin{DoxyAuthor}{Author}
+Coline van Leeuwen 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{sokoban_8h_a54ba0c4c4ebd4816fa5cd6af6b9f0828}{\index{sokoban.\-h@{sokoban.\-h}!access@{access}}
+\index{access@{access}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}char access (
+\begin{DoxyParamCaption}
+\item[{{\bf smap} $\ast$}]{p\-\_\-map, }
+\item[{{\bf scell}}]{cell}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_a54ba0c4c4ebd4816fa5cd6af6b9f0828}
+
+
+Gives the value of a given cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-map} & a pointer to a map\\
+\hline
+{\em pos} & the cell to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the content of the cell 
+\end{DoxyReturn}
+\hypertarget{sokoban_8h_afcfc6b3f5188c90586245c87d3268fc2}{\index{sokoban.\-h@{sokoban.\-h}!create\-\_\-doublon@{create\-\_\-doublon}}
+\index{create\-\_\-doublon@{create\-\_\-doublon}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{create\-\_\-doublon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smap}$\ast$ create\-\_\-doublon (
+\begin{DoxyParamCaption}
+\item[{{\bf smap}}]{map}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_afcfc6b3f5188c90586245c87d3268fc2}
+
+
+Creates a new map, with exactly the same information as in the old one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & the map to copy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new map 
+\end{DoxyReturn}
+\hypertarget{sokoban_8h_a209e5f04285341ef858e2e4c23e92d6d}{\index{sokoban.\-h@{sokoban.\-h}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{deallocate}]{\setlength{\rightskip}{0pt plus 5cm}void deallocate (
+\begin{DoxyParamCaption}
+\item[{{\bf smap} $\ast$}]{p\-\_\-map}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_a209e5f04285341ef858e2e4c23e92d6d}
+
+
+Frees the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-map} & a pointer to the map to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{sokoban_8h_ab77b650ea7edf51128d82c6fe25db1fa}{\index{sokoban.\-h@{sokoban.\-h}!deplacer\-\_\-boite@{deplacer\-\_\-boite}}
+\index{deplacer\-\_\-boite@{deplacer\-\_\-boite}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{deplacer\-\_\-boite}]{\setlength{\rightskip}{0pt plus 5cm}void deplacer\-\_\-boite (
+\begin{DoxyParamCaption}
+\item[{{\bf smap} $\ast$}]{p\-\_\-map, }
+\item[{{\bf scell}}]{goal\-\_\-cell, }
+\item[{char}]{direction, }
+\item[{int $\ast$}]{flag}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_ab77b650ea7edf51128d82c6fe25db1fa}
+
+
+To use if the player goes in a box \-: moves the box according to the rules of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-map} & a pointer to a map\\
+\hline
+{\em case\-\_\-cible} & a cell representing the position of the box the player wants to go into\\
+\hline
+{\em direction} & a char representing the direction of the movement\\
+\hline
+{\em flag} & a pointer to an int (helps to hand over the information that the movement is impossible) \\
+\hline
+\end{DoxyParams}
+\hypertarget{sokoban_8h_a4ce5696a930daf9f836524d8f38bae3c}{\index{sokoban.\-h@{sokoban.\-h}!modify@{modify}}
+\index{modify@{modify}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{modify}]{\setlength{\rightskip}{0pt plus 5cm}void modify (
+\begin{DoxyParamCaption}
+\item[{{\bf smap} $\ast$}]{p\-\_\-map, }
+\item[{{\bf scell}}]{cell, }
+\item[{char}]{new}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_a4ce5696a930daf9f836524d8f38bae3c}
+
+
+Modifies a given cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-map} & a pointer to the map to modify\\
+\hline
+{\em pos} & the cell to modify\\
+\hline
+{\em new} & a char representing the new value of the cell \\
+\hline
+\end{DoxyParams}
+\hypertarget{sokoban_8h_abfda627829f36a496e65e1c470297ed4}{\index{sokoban.\-h@{sokoban.\-h}!move\-\_\-player@{move\-\_\-player}}
+\index{move\-\_\-player@{move\-\_\-player}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{move\-\_\-player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smap}$\ast$ move\-\_\-player (
+\begin{DoxyParamCaption}
+\item[{{\bf smap} $\ast$}]{p\-\_\-map, }
+\item[{char}]{direction}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_abfda627829f36a496e65e1c470297ed4}
+
+
+Moves the player according to the rules of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-map} & a pointer to the map\\
+\hline
+{\em direction} & a char representing the direction of the movement\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the map after the player has moved 
+\end{DoxyReturn}
+\hypertarget{sokoban_8h_a08198a23ebb8705b3d733f82c54e3ddb}{\index{sokoban.\-h@{sokoban.\-h}!print\-\_\-map@{print\-\_\-map}}
+\index{print\-\_\-map@{print\-\_\-map}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{print\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{{\bf smap} $\ast$}]{p\-\_\-map}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_a08198a23ebb8705b3d733f82c54e3ddb}
+
+
+Prints a map on the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\-\_\-map} & a pointer to the map to print \\
+\hline
+\end{DoxyParams}
+\hypertarget{sokoban_8h_afdafec469349ec9fa9e4527517a2b4df}{\index{sokoban.\-h@{sokoban.\-h}!replay@{replay}}
+\index{replay@{replay}!sokoban.h@{sokoban.\-h}}
+\subsubsection[{replay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smap}$\ast$ replay (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{int}]{length, }
+\item[{char $\ast$}]{mvts}
+\end{DoxyParamCaption}
+)}}\label{sokoban_8h_afdafec469349ec9fa9e4527517a2b4df}
+
+
+Replays a map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & a string representing the name of the map to replay\\
+\hline
+{\em length} & the length of the plan\\
+\hline
+{\em mvts} & a string representing the plan\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the final map, when the player has moved according to the plan 
+\end{DoxyReturn}
